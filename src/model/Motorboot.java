@@ -6,6 +6,11 @@ package model;
  *         Subclass Motorboot
  */
 public class Motorboot extends Vaartuig implements Belastbaar {
+    protected final int LENGTE_SCHAAL_1 = 12;
+    protected final int DIESEL_OPSLAG_PERCENTAGE = 50;
+    protected final double BEDRAG_SCHAAL_1 = 60;
+    protected final double BEDRAG_SCHAAL_2 = 100;
+
     private String soortBrandstof;
 
     public Motorboot(String merk, String type, double lengteInMeter, String soortBrandstof) {
@@ -26,12 +31,8 @@ public class Motorboot extends Vaartuig implements Belastbaar {
 
     @Override
     public double getVervoerBelasting() {
-        final int LENGTE_SCHAAL_1 = 12;
-        final int DIESEL_OPSLAG_PERCENTAGE = 50;
-        final double BEDRAG_SCHAAL_1 = 60;
-        final double BEDRAG_SCHAAL_2 = 100;
-
         double bedrag;
+
         if (super.getLengteInMeter() < LENGTE_SCHAAL_1) {
             bedrag = BEDRAG_SCHAAL_1;
         } else {
