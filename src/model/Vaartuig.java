@@ -22,4 +22,8 @@ public abstract class Vaartuig extends Vervoermiddel {
     public String toString() {
         return super.toString();
     }
+
+    public double getLengteInMeter() {
+        return lengteInMeter;
+    }
 }

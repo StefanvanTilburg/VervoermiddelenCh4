@@ -28,4 +28,8 @@ public abstract class Voertuig extends Vervoermiddel {
     public void setGewicht(int gewicht) {
         this.gewicht = gewicht;
     }
+
+    public int getGewicht() {
+        return gewicht;
+    }
 }
